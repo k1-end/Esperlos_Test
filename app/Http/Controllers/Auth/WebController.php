@@ -58,17 +58,7 @@ class WebController extends Controller
         return redirect('/');
     }
 
-    public function refresh()
-    {
-        return response()->json([
-            'status' => 'success',
-            'user' => Auth::user(),
-            'authorization' => [
-                'token' => Auth::refresh(),
-                'type' => 'bearer',
-            ]
-        ]);
-    }
+    
 
     public function loginPage()
     {
@@ -77,6 +67,11 @@ class WebController extends Controller
     public function registerPage()
     {
         return view('register');
+    }
+
+    public function dashboard()
+    {
+        return view('dashboard');
     }
 
 }

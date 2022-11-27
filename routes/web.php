@@ -24,7 +24,7 @@ Route::get('/register',[WebController::class, 'registerPage'])->name('register')
 Route::post('/register',[WebController::class, 'register']);
 
 
-Route::get('/dashboard',[WebController::class, ''])->name('dashboard')->middleware('auth');;
+Route::get('/dashboard',[WebController::class, 'dashboard'])->name('dashboard')->middleware('auth');;
 Route::get('/logout',[WebController::class, 'logout'])->name('logout')->middleware('auth');;
 
 
